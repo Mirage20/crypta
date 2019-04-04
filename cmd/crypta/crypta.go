@@ -17,10 +17,19 @@ var (
 	keyFile       string
 	decryptMode   bool
 	base64Encoded bool
+	version       bool
 )
+
+var versionString string
 
 func main() {
 	flag.Parse()
+
+	if version {
+		fmt.Println("crypta", versionString)
+		return
+	}
+
 	inData, err := io.ReadInput(inFile)
 	check(err)
 	if decryptMode {
@@ -60,4 +69,5 @@ func init() {
 	flag.StringVar(&inFile, "in", "", "Input file path. Uses standard input if not provided")
 	flag.StringVar(&keyFile, "key", "", "Public key file path for encrypting or private key file path for decrypting")
 	flag.StringVar(&outFile, "out", "", "Output file path. Uses standard output if not provided")
+	flag.BoolVar(&version, "version", false, "output version information")
 }

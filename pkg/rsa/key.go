@@ -41,7 +41,7 @@ func loadPem(file string, envVar string) ([]byte, error) {
 		var ok bool
 		pemFile, ok = os.LookupEnv(envVar)
 		if !ok {
-			return nil, fmt.Errorf("key file is not specified. Use -key or %s envarment varible to set the key file", envVar)
+			return nil, fmt.Errorf("key file is not specified. Use -key or %s environment varible to set the key file", envVar)
 		}
 	}
 	fileBytes, err := ioutil.ReadFile(pemFile)
