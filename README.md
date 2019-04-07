@@ -1,6 +1,6 @@
 # Crypta
 
-Crypta is another data encryption tool that uses RSA-AES encryption to securely transfer your data.
+Crypta is another data encryption tool that uses RSA-AES hybrid encryption to securely transfer your data.
 
 ## Getting Started
 
@@ -8,7 +8,39 @@ Crypta is another data encryption tool that uses RSA-AES encryption to securely 
 
 #### Linux
 
+1. Download
+
+    ```bash
+    curl -LO https://github.com/Mirage20/crypta/releases/latest/download/crypta-linux-x64.tar.gz
+    ```
+2. Extract
+
+    ```bash
+    tar -xzvf crypta-linux-x64.tar.gz
+    ```
+3. Install
+
+    ```bash
+     sudo mv ./crypta /usr/local/bin/crypta
+    ```
+
 #### MacOS
+
+1. Download
+
+    ```bash
+    curl -LO https://github.com/Mirage20/crypta/releases/latest/download/crypta-darwin-x64.tar.gz
+    ```
+2. Extract
+
+    ```bash
+    tar -xzvf crypta-darwin-x64.tar.gz
+    ```
+3. Install
+
+    ```bash
+     sudo mv ./crypta /usr/local/bin/crypta
+    ```
 
 ### Usage
 
@@ -58,7 +90,7 @@ Crypta is another data encryption tool that uses RSA-AES encryption to securely 
     
 4. Run `crypta --help` for more information
 
-    ```bash
+    ```text
     Usage of crypta:
       -base64
             Use base64 encoding to write output (encrypt mode), and base64 decoding to read input (decrypt mode)
